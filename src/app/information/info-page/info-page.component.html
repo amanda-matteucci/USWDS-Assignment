@@ -1,0 +1,170 @@
+<section
+	id="about"
+	class="introduction scrollto pull-right"
+	*ngIf="info$ | async as info">
+	<div class="row clearfix">
+
+		<div class="col-3"></div>
+		<div class="col-2-3">
+			<div class="section-heading">
+				<h3>{{ info.tagline }}</h3>
+				<h2 class="section-title">{{ info.title }}</h2>
+				<p class="section-subtitle">{{ info.description }}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-3"></div>
+
+	<div class="col-3">
+
+		<div class="usa-form-group">
+
+			<label class="usa-label" for="input-type-text">Full Legal Name</label><input
+				class="usa-input" id="input-type-text" name="input-type-text" />
+		</div>
+
+		<div class="usa-form-group">
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend">Date of Birth</legend>
+				<div class="usa-memorable-date">
+					<div class="usa-form-group usa-form-group--month usa-form-group--select">
+						<label class="usa-label" for="date_of_birth_month">Month</label>
+						<select
+							class="usa-select"
+							id="date_of_birth_month"
+							name="date_of_birth_month"
+							aria-describedby="mdHint">
+							<option value>- Select -</option>
+							<option value="1">01 - January</option>
+							<option value="2">02 - February</option>
+							<option value="3">03 - March</option>
+							<option value="4">04 - April</option>
+							<option value="5">05 - May</option>
+							<option value="6">06 - June</option>
+							<option value="7">07 - July</option>
+							<option value="8">08 - August</option>
+							<option value="9">09 - September</option>
+							<option value="10">10 - October</option>
+							<option value="11">11 - November</option>
+							<option value="12">12 - December</option>
+						</select>
+					</div>
+					<div class="usa-form-group usa-form-group--day">
+						<label class="usa-label" for="date_of_birth_day">Day</label>
+						<input
+							class="usa-input"
+							aria-describedby="mdHint"
+							id="date_of_birth_day"
+							name="date_of_birth_day"
+							maxlength="2"
+							pattern="[0-9]*"
+							inputmode="numeric"
+							value />
+					</div>
+					<div class="usa-form-group usa-form-group--year">
+						<label class="usa-label" for="date_of_birth_year">Year</label>
+						<input
+							class="usa-input"
+							aria-describedby="mdHint"
+							id="date_of_birth_year"
+							name="date_of_birth_year"
+							minlength="4"
+							maxlength="4"
+							pattern="[0-9]*"
+							inputmode="numeric"
+							value />
+					</div>
+				</div>
+			</fieldset>
+		</div>
+
+		<div class="usa-form-group">
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend usa-legend">Employment Status</legend>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="job-employed"
+						type="radio"
+						name="job-status"
+						value="employed" />
+					<label class="usa-radio__label" for="job-employed">Employed</label>
+				</div>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="job-unemployed"
+						type="radio"
+						name="job-status"
+						value="unemployed" />
+					<label class="usa-radio__label" for="job-unemployed">Unemployed</label>
+				</div>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="job-retired"
+						type="radio"
+						name="job-status"
+						value="retired" />
+					<label class="usa-radio__label" for="job-retired">Retired</label>
+				</div>
+			</fieldset>
+		</div>
+		<div class="usa-form-group">
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend">Check All That Apply</legend>
+				<div class="usa-checkbox">
+					<input
+						class="usa-checkbox__input usa-checkbox__input--tile"
+						id="check-driver"
+						type="checkbox"
+						name="driver"
+						value="driver" />
+					<label class="usa-checkbox__label" for="check-driver">Driver
+						<span class="usa-checkbox__label-description">
+							Check if you have a valid driver's license.
+						</span>
+					</label>
+				</div>
+				<div class="usa-checkbox">
+					<input
+						class="usa-checkbox__input usa-checkbox__input--tile"
+						id="check-biker"
+						type="checkbox"
+						name="biker"
+						value="biker" />
+					<label class="usa-checkbox__label" for="check-biker">Biker
+						<span class="usa-checkbox__label-description">
+							Check if you own a bicycle and/or a motorcycle.
+						</span>
+					</label>
+				</div>
+			</fieldset>
+		</div>
+		<div class="usa-form-group">
+			<div class="usa-character-count">
+				<div class="usa-form-group">
+					<label class="usa-label" for="with-hint-textarea">Comments</label>
+					<span id="with-hint-textarea-hint" class="usa-hint">
+						Leave any comments about this form.
+					</span>
+					<textarea
+						class="usa-textarea usa-character-count__field"
+						id="with-hint-textarea"
+						maxlength="500"
+						name="with-hint-textarea"
+						rows="10"
+						aria-describedby="with-hint-textarea-info with-hint-textarea-hint"></textarea>
+				</div>
+				<span id="with-hint-textarea-hint" class="usa-hint">
+					You can enter up to 500 characters.
+				</span>
+			</div>
+
+		</div>
+		<div class="row clearfix">
+			<button type="button" class="usa-button">Submit</button>
+		</div>
+	</div>
+</section>

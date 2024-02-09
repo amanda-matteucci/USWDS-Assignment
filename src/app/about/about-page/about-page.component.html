@@ -1,0 +1,96 @@
+<section
+	id="about"
+	class="introduction scrollto pull-right"
+	*ngIf="intro$ | async as intro">
+	<div class="row clearfix">
+		<div class="col-3">
+			<div class="section-heading">
+				<h3>{{ intro.tagline }}</h3>
+				<h2 class="section-title">{{ intro.title }}</h2>
+				<p class="section-subtitle">{{ intro.description }}</p>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="usa-card__container">
+				<div class="usa-card__header">
+					<h2 class="usa-card__heading"><a id="card-with-media"
+							class="usa-anchor"></a>Card Component</h2>
+				</div>
+				<div class="usa-card__media">
+					<div class="usa-card__img">
+						<img src="./assets/images/graphic.PNG" alt="tech-image">
+					</div>
+				</div>
+				<div class="usa-card__body">
+					<p>
+						A card component is a great way to display information along with an image
+						and a link.
+					</p>
+				</div>
+				<div class="usa-card__footer">
+					<a href="https://designsystem.digital.gov/components/card/" target="_blank"class="usa-button">Click here</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="row clearfix accordian">
+		<div class ="col-1">
+		<h3>Accordian Component:</h3>
+		<div data-allow-multiple
+			class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable">
+			<h4 class="usa-accordion__heading">
+				<button type="button" class="usa-accordion__button" aria-expanded="false"
+					aria-controls="b-a1">
+					What are Accordians used for?
+				</button>
+			</h4>
+			<div id="b-a1" class="usa-accordion__content usa-prose" hidden>
+				<p>
+					Accordian components are great for displaying different pieces of information such as FAQs. 
+					Accordions are commonly used to reduce the need to scroll when presenting multiple sections of content on a single page.
+				</p>
+			</div>
+			<h4 class="usa-accordion__heading">
+				<button type="button" class="usa-accordion__button" aria-expanded="false"
+					aria-controls="b-a2">
+					Are there different modifiers for the Accordian?
+				</button>
+			</h4>
+			<div id="b-a2" class="usa-accordion__content usa-prose" hidden>
+				<p>
+					Absolutely! There are three modifiers for the Accordian.
+				</p>
+				<ul>
+					<li>Borderless (not currently displayed) </li>
+					<li>Bordered</li>
+					<li>Multiselectable</li>
+				</ul>
+			</div>
+			<h4 class="usa-accordion__heading">
+				<button type="button" class="usa-accordion__button" aria-expanded="false"
+					aria-controls="b-a3">
+					What does the Multiselectable modifier do?
+				</button>
+			</h4>
+			<div id="b-a3" class="usa-accordion__content usa-prose" hidden>
+				<p>
+					By default the Accordian closes all other sections when a new one is clicked. When using the Multiselectable modifier, all previously clicked sections will stay open.
+				</p>
+			</div>
+			<h4 class="usa-accordion__heading">
+				<button type="button" class="usa-accordion__button" aria-expanded="false"
+					aria-controls="b-a4">
+					What does the Borderless modifier do?
+				</button>
+			</h4>
+			<div id="b-a4" class="usa-accordion__content usa-prose" hidden>
+				<p>
+					The Borderless modifier removes the thin line that is displayed around the sections of the Accordian while they are open.
+				</p>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>

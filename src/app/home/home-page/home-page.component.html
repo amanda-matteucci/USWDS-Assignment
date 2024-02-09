@@ -1,0 +1,21 @@
+<div *ngIf="header$ | async as header">
+	<header
+		id="banner"
+		class="scrollto clearfix shift-left"
+		data-enllax-ratio=".5"
+		>
+		<section class="usa-hero" aria-label="Introduction">
+			<div class="grid-container">
+				<div class="usa-hero__callout">
+					<h1 class="usa-hero__heading">
+					<span class="usa-hero__heading--alt">{{ header.tagline }}</span>
+					</h1>
+					<p>{{ header.title }}</p>
+					<a routerLink="{{ header.buttonlink }}" class="usa-button">{{
+						header.buttontext
+					}}</a>
+				</div>
+			</div>
+		</section>
+	</header>
+</div>
